@@ -34,14 +34,15 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'bail|required|string|max:255',
-            'category' => 'bail|required|string|max:255'
-
+            'category' => 'bail|required|string|max:255',
+            'deadline' => 'bail|required|date'
         ]);
 
         Category::create([
             'name' => $request->name,
             'description' => $request->description,
-            'category' => $request->category
+            'category' => $request->category,
+            'deadline' => $request->deadline
 
         ]);
 
@@ -73,22 +74,23 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'bail|required|string|max:255',
             'description' => 'bail|required|string|max:255',
-            'category' => 'bail|required|string|max:255'
+            'category' => 'bail|required|string|max:255',
+            'deadline' => 'bail|required|date'
         ]);
 
         $category->update([
             'name' => $request->name,
             'description' => $request->description,
             'category' => $request->category,
-            // 'status' => $request->status == true ? 1 : 0,
+            'deadline' => $request->deadline
         ]);
 
         return redirect()->route('category.index');
     }
 
-    // Marking the task as done
-
-    // app/Http/Controllers/CategoryController.php
+    /**
+     * Marking the task as done
+     */
     public function markAsDone(Request $request, $id)
     {
         // Update category status to done
@@ -96,7 +98,6 @@ class CategoryController extends Controller
         $category->status = 1;
         $category->save();
 
-        // dd($category);
         return redirect()->route('category.index');
     }
 
@@ -107,6 +108,5 @@ class CategoryController extends Controller
     {
         $category->delete();
         return redirect()->route('category.index');
-        // ->with('status', 'Your Category has been Deleted Successfully!');
     }
 }

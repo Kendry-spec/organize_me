@@ -13,6 +13,7 @@ class Category extends Model
         'name',
         'description',
         'category',
+        'deadline',
         'status'
     ];
 }
