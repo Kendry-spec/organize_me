@@ -18,8 +18,8 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
 
-    Route::resource('category', CategoryController::class);
     Route::patch('category/{id}/mark-as-done', [CategoryController::class, 'markAsDone'])->name('category.mark-as-done');
+    Route::resource('category', CategoryController::class);
     
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
