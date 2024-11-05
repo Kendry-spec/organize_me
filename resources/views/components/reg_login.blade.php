@@ -13,8 +13,15 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
     {{-- SweetAlert links --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" integrity="sha256-rUxk4uR5A2yw6z0WqCSMoz9s(:,:,A4ye9h8jvwCwsdvfuQh7MZxbzoRBroTqqtQ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js" integrity="sha256-8A4AC1Q8izsdOE0PR pukSTksv3L2vfuuGnQJuiK7GsE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" 
+      integrity="sha256-qWVM38RAVYHA4W8TAlDdszO1hRaAq0ME7y2e9aab354=" 
+      crossorigin="anonymous"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js" 
+      integrity="sha256-U9LehD2IdwJEt0PXfqH+Mfoyk3/UNxTlfegsMQWOQrY=" 
+      crossorigin="anonymous"
+    >
 
     @vite('resources/css/app.css')
 </head>
@@ -25,12 +32,8 @@
   <header class="bg-slate-800 text-white shadow-md py-4 fixed top-0 left-0 w-full">
     <nav class="container mx-auto flex justify-between items-center">
       <h1 class="text-5xl font-semibold">{{ config('app.name', 'OrganizeMe') }}</h1>
-      {{-- <ul class="flex space-x-4">
-        <li><a href="{{ route('home') }}" class="hover:text-gray-300 text-2xl">back</a></li>
-      </ul> --}}
     </nav>
   </header>
-
 
   {{-- Main content section --}}
   <main>

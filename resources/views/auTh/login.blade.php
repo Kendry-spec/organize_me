@@ -25,7 +25,7 @@
                                 id="email" 
                                 value="{{ old('email') }}"
                                 class="block w-full p-2 pl-10 text-xl text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
-                                autofocus
+                                autofocus autocomplete="off"
                             >
                             @error('email')
                                 <p class="text-red-600 text-lg">*{{ $message }}</p>
