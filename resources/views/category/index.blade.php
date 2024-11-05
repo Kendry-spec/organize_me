@@ -20,11 +20,11 @@
                         <table class="table-auto w-full text-left text-lg border border-gray-300">
                             <thead class="bg-gray-200 border-b border-gray-300">
                                 <tr>
-                                    <th class="px-4 py-2 border-r border-gray-300">ID</th>
-                                    <th class="px-4 py-2 border-r border-gray-300">TASK</th>
+                                    <th class="px-2 py-2 border-r border-gray-300">ID</th>
+                                    <th class="px-10 py-2 border-r border-gray-300">TASK</th>
                                     <th class="px-4 py-2 border-r border-gray-300">DESCRIPTION</th>
                                     <th class="px-4 py-2 border-r border-gray-300">TASK CATEGORY</th>                                    
-                                    <th class="px-4 py-2 border-r border-gray-300">STATUS</th>
+                                    <th class="px-2 py-2 border-r border-gray-300">STATUS</th>
                                     <th class="px-4 py-2">ACTION</th>
                                 </tr>
                             </thead>
