@@ -40,6 +40,12 @@
                                 <label class="text-gray-700 font-bold">Task Category:</label>
                                 <span class="ml-2 text-gray-900">{{ $category->category }}</span>
                             </div>
+
+                            <!-- Task Deadline -->
+                            <div class="mb-4">
+                                <label class="text-gray-700 font-bold">Task Deadline:</label>
+                                <span class="ml-2 text-gray-900">{{ $category->deadline }}</span>
+                            </div>
                             
                             <!-- Task Status -->
                             <div class="mb-4">
