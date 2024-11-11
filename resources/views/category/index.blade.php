@@ -23,7 +23,7 @@
                                     <th class="px-4 py-2 border-r border-gray-300">ID</th>
                                     <th class="px-4 py-2 border-r border-gray-300">TASK</th>
                                     <th class="px-4 py-2 border-r border-gray-300">DEADLINE</th>
-                                    <th class="px-4 py-2 border-r border-gray-300">TASK CATEGORY</th>                                    
+                                    {{-- <th class="px-4 py-2 border-r border-gray-300">TASK CATEGORY</th>                                     --}}
                                     <th class="px-2 py-2 border-r border-gray-300">STATUS</th>
                                     <th class="px-4 py-2">ACTION</th>
                                 </tr>
@@ -37,7 +37,7 @@
                                     <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->id }}</td>
                                     <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->name }} </td>
                                     <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->deadline }}</td>
-                                    <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->category }}</td>
+                                    {{-- <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->category }}</td> --}}
                                     <td class="px-4 text-xl py-2 border-r border-gray-300">
                                         {{ $category->status === 0 ? 'Pending' : 'Done' }}
                                     </td>
