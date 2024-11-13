@@ -120,12 +120,14 @@
         const nameInput = document.getElementById('name');
         const descriptionInput = document.getElementById('description');
         const categoryInput = document.getElementById('category');
+        const deadlineInput = document.getElementById('deadline');
     
         form.addEventListener('submit', function(event) {
             if (
                 nameInput.value.trim() === '' || 
                 descriptionInput.value.trim() === '' || 
-                categoryInput.value.trim() === ''
+                categoryInput.value.trim() === '' ||
+                deadlineInput.value.trim() === ''
             ) {
                 Swal.fire({
                     icon: "error",
