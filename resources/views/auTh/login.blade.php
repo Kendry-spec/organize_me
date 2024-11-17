@@ -1,5 +1,4 @@
 <x-reg_login>
-
     <!-- Add margin to separate form from header -->
     <div class="container max-w-3xl mx-auto p-16 mt-24">
         <div class="grid grid-cols-1 gap-4">
@@ -8,7 +7,7 @@
                     <div class="flex justify-between items-center mb-4">
                         <h3 class="text-4xl text-indigo-500">Login</h3>
                     </div>
-                    <form action="{{ route('login') }}" method="POST" class="text-xl">
+                    <form action="{{ route('login.store') }}" method="POST" class="text-xl">
                         @csrf
 
                         <!-- Email -->

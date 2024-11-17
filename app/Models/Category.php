@@ -14,6 +14,12 @@ class Category extends Model
         'description',
         'category',
         'deadline',
-        'status'
+        'status',
+        'user_id'
     ];
+
+    public function user() 
+    {
+        return $this->belongsTo(User::class);
+    }
 }

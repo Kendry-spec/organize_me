@@ -3,8 +3,8 @@
     <!-- Adding margin to separate form from header -->
     <div class="container max-w-3xl mx-auto mt-24">
         <div class="bg-gray-100 rounded-lg shadow-md p-2">
-            <h3 class="text-center text-4xl text-indigo-500 mb-4">Register a new account</h3>
-            <form action="{{ route('register') }}" method="POST" class="text-xl px-8">
+            <h3 class="text-center text-4xl text-indigo-500 mb-4">Register</h3>
+            <form action="{{ route('register.store') }}" method="POST" class="text-xl px-8">
                 @csrf
 
                 <!-- Username -->

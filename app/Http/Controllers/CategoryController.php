@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
@@ -12,7 +13,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(5);
+        $categories = Auth::user()->categories()->paginate(5);
+       
         return view('category.index', [
             'categories' => $categories,
         ]);
@@ -31,21 +33,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'bail|required|string|max:255',
             'category' => 'bail|required|string|max:255',
             'deadline' => 'bail|required|date'
         ]);
 
-        Category::create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'category' => $request->category,
-            'deadline' => $request->deadline
-
-        ]);
-
+        auth()->user()->categories()->create($validated);
         return redirect()->route('category.index');
 
     }
@@ -55,6 +50,10 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
+        if ($category->user_id !== Auth::id()) {
+            //abort(403, 'Forbidden');
+            return redirect()->route('auth.login');
+        }
         return view('category.show', compact('category'));
     }
 
@@ -106,6 +105,12 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
+        if ($category->user_id !== Auth::id()) {
+            // abort(403, 'Forbidden');
+            return redirect()->route('auth.login');
+
+        }
+
         $category->delete();
         return redirect()->route('category.index');
     }
