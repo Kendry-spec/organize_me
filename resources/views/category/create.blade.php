@@ -1,9 +1,9 @@
 <x-layout>
 
     <!-- Adding margin to separate form from header -->
-    <div class="container max-w-2xl mx-auto mt-16">
+    <div class="container max-w-2xl mx-auto mt-14">
         <div class="bg-gray-100 rounded-lg shadow-md p-2">
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center">
                 <h3 class="text-4xl text-indigo-500 px-10">Add New Task</h3>
                 <a 
                     href="{{ route('category.index') }}" 
@@ -21,7 +21,7 @@
                 @csrf
 
                 <!-- Task Name -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="name" 
                         class="block text-gray-700 text-lg font-bold mb-2"
@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- Description -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="description" 
                         class="block text-gray-700 text-lg font-bold mb-2"
@@ -61,7 +61,7 @@
                 </div>
 
                 <!-- Task Category -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="category" 
                         class="block text-gray-700 text-lg font-bold mb-2"
@@ -81,7 +81,7 @@
                 </div>
 
                 <!-- Deadline -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="deadline" 
                         class="block text-gray-700 text-lg font-bold mb-2"

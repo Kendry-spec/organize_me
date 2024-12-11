@@ -5,20 +5,7 @@
         <div class="flex justify-center">
             <div class="w-full md:w-12/12 lg:w-12/12 xl:w-12/12">
                 <div class="bg-gray-100 rounded shadow-md p-5">
-                    <div class="flex justify-between items-center mb-5">
-                        
-                        @if ($categories->isNotEmpty())
-                            <h2 class="text-4xl text-indigo-500">My To-Do List</h2>
-                            <a 
-                                 href="{{ route('category.create') }}" 
-                                class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 text-xl rounded"
-                            >
-                                Add New Task
-                            </a>  
-                        @endif
-                        
-                    </div>
-
+                   
                     @if ($categories->isEmpty())
                         <div class="flex justify-center items-center py-12">
                             <div class="text-center">
@@ -28,6 +15,19 @@
                             </div>
                         </div>
                     @else
+
+                        <div class="flex justify-between items-center mb-5">
+                            
+                                <h2 class="text-4xl text-indigo-500">My To-Do List</h2>
+                                <a 
+                                    href="{{ route('category.create') }}" 
+                                    class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 text-xl rounded"
+                                >
+                                    Add New Task
+                                </a>  
+                            
+                        </div>
+                    
                         <!-- To-Do List Table -->
                         <div class="overflow-x-auto">
                             <table class="table-auto w-full text-left text-lg border border-gray-300">

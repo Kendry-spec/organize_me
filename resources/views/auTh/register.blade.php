@@ -1,14 +1,14 @@
 <x-reg_login>
 
     <!-- Adding margin to separate form from header -->
-    <div class="container max-w-3xl mx-auto mt-24">
+    <div class="container max-w-3xl mx-auto mt-16">
         <div class="bg-gray-100 rounded-lg shadow-md p-2">
-            <h3 class="text-center text-4xl text-indigo-500 mb-4">Register</h3>
-            <form action="{{ route('register.store') }}" method="POST" class="text-xl px-8">
+            <h3 class="text-center text-4xl text-indigo-500">Register</h3>
+            <form action="{{ route('register.store') }}" method="POST" class="text-xl px-14">
                 @csrf
 
                 <!-- Username -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="username" 
                         class="block text-gray-700 text-xl font-bold mb-2"
@@ -28,7 +28,7 @@
                 </div>
 
                 <!-- Email -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="email" 
                         class="block text-gray-700 text-xl font-bold mb-2"
@@ -49,7 +49,7 @@
                 </div>
 
                 <!-- Password -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="password" 
                         class="block text-gray-700 text-xl font-bold mb-2"
@@ -68,7 +68,7 @@
                 </div>
 
                 <!-- Confirm Password -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="password_confirmation" 
                         class="block text-gray-700 text-xl font-bold mb-2"

@@ -30,8 +30,8 @@
  
     <!-- Header Section -->
   <header class="bg-slate-800 text-white shadow-md py-4 fixed top-0 left-0 w-full">
-    <nav class="container mx-auto flex justify-between items-center">
-      <h1 class="text-5xl font-semibold">{{ config('app.name', 'OrganizeMe') }}</h1>
+    <nav class="container mx-auto flex justify-normal">
+      <h1 class="text-3xl font-semibold">{{ config('app.name', 'OrganizeMe') }}</h1>
     </nav>
   </header>
 
