@@ -18,9 +18,9 @@
 
     <body class="bg-gray-900 overflow-hidden">
         <!-- Header Section -->
-        <header class="bg-indigo-700 text-white shadow-md py-4 fixed top-0 left-0 w-full z-50">
-            <nav class="container mx-auto flex justify-stretch">
-                <h1 class="text-3xl font-semibold">{{ config('app.name', 'OrganizeMe') }}</h1>
+        <header class="bg-indigo-800 text-white shadow-md py-4 fixed top-0 left-0 w-full z-50">
+            <nav class="container mx-auto flex justify-center items-center">
+                <h1 class="text-4xl font-bold">{{ config('app.name', 'OrganizeMe') }}</h1>
             </nav>
         </header>
 
@@ -28,12 +28,12 @@
         <main class="relative z-10 h-screen flex items-center justify-center">
             <!-- Welcome Message -->
             <div class="text-center">
-                <h1 class="text-5xl text-yellow-500  mb-6">Welcome to OrganizeMe</h1>
-                <p class="text-2xl text-white">Get Focused, Stay Organized!</p>
-                <button class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded text-lg mt-8">
+                <h1 class="text-6xl text-yellow-500 font-bold mb-6">Welcome to OrganizeMe</h1>
+                <p class="text-3xl text-white">Get Focused, Stay Organized!</p>
+                <button class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded text-xl mt-8">
                     <a href="{{ route('login') }}">Get Started</a>
                 </button>
-                <p class="text-lg text-white mt-4">
+                <p class="text-xl text-white mt-4">
                     Don't have an account?
                     <a href="{{ route('register') }}" class="text-blue-500 text-xl hover:text-blue-800">Register here</a>
                 </p>

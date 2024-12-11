@@ -28,7 +28,7 @@ class SendDeadlineReminders extends Command
      */
     public function handle()
     {
-        $categories = Category::whereDate('deadline', '=', now()->addDay())->get();
+        $categories = Category::whereDate('deadline', '=', now()->addDays(7))->get();
 
         foreach ($categories as $category) {
             Mail::to($category->user->email)->send(new DeadlineReminder($category, $category->deadline));

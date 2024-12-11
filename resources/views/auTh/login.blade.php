@@ -1,6 +1,6 @@
 <x-reg_login>
     <!-- Add margin to separate form from header -->
-    <div class="container max-w-3xl mx-auto p-16 mt-8">
+    <div class="container max-w-3xl mx-auto p-16 mt-24">
         <div class="grid grid-cols-1 gap-4">
             <div>
                 <div class="bg-gray-100 rounded-lg shadow-md p-4">
