@@ -11,7 +11,7 @@ class RegisterUserController extends Controller
 {
     public function register()
     {
-        return view('auTh.register');
+        return view('auth.register');
     }
 
     // Store a newly registered user in storage
