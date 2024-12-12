@@ -1,17 +1,17 @@
 <x-reg_login>
 
     <!-- Adding margin to separate form from header -->
-    <div class="container max-w-3xl mx-auto mt-24">
-        <div class="bg-gray-100 rounded-lg shadow-md p-2">
-            <h3 class="text-center text-4xl text-indigo-500 mb-4">Register</h3>
-            <form action="{{ route('register.store') }}" method="POST" class="text-xl px-8">
+    <div class="container max-w-3xl mx-auto p-11 px-16">
+        <div class="bg-gray-100 rounded-lg shadow-md p-2 ">
+            <h3 class="text-center text-3xl text-indigo-500 mb-4">Register New Account</h3>
+            <form action="{{ route('register.store') }}" method="POST" class="text-xl px-16">
                 @csrf
 
                 <!-- Username -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="username" 
-                        class="block text-gray-700 text-xl font-bold mb-2"
+                        class="block text-gray-700 text-xl font-semibold mb-2"
                     >
                         Username
                     </label>
@@ -28,10 +28,10 @@
                 </div>
 
                 <!-- Email -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="email" 
-                        class="block text-gray-700 text-xl font-bold mb-2"
+                        class="block text-gray-700 text-xl font-semibold mb-2"
                     >
                         Email
                     </label>
@@ -49,10 +49,10 @@
                 </div>
 
                 <!-- Password -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="password" 
-                        class="block text-gray-700 text-xl font-bold mb-2"
+                        class="block text-gray-700 text-xl font-semibold mb-2"
                     >
                         Password
                     </label>
@@ -68,10 +68,10 @@
                 </div>
 
                 <!-- Confirm Password -->
-                <div class="mb-4">
+                <div class="mb-3">
                     <label 
                         for="password_confirmation" 
-                        class="block text-gray-700 text-xl font-bold mb-2"
+                        class="block text-gray-700 text-xl font-semibold mb-2"
                     >
                         Confirm Password
                     </label>
@@ -87,7 +87,7 @@
                 <div class="flex items-center justify-between mb-4">
                     <button 
                         type="submit" 
-                        class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded text-xl"
+                        class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded text-lg"
                     >
                         Register
                     </button>
