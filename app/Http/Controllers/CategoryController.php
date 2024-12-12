@@ -52,7 +52,7 @@ class CategoryController extends Controller
     {
         if ($category->user_id !== Auth::id()) {
             //abort(403, 'Forbidden');
-            return redirect()->route('auth.login');
+            return redirect()->route('auTh.login');
         }
         return view('category.show', compact('category'));
     }
@@ -107,7 +107,7 @@ class CategoryController extends Controller
     {
         if ($category->user_id !== Auth::id()) {
             // abort(403, 'Forbidden');
-            return redirect()->route('auth.login');
+            return redirect()->route('auTh.login');
 
         }
 
