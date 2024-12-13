@@ -1,7 +1,7 @@
 <x-layout>
 @auth
     <!-- Container for To-Do List -->
-    <div class="container max-w-6xl mx-auto mt-24">
+    <div class="container max-w-6xl mx-auto mt-14">
         <div class="flex justify-center">
             <div class="w-full md:w-12/12 lg:w-12/12 xl:w-12/12">
                 <div class="bg-gray-100 rounded shadow-md p-5">
@@ -50,7 +50,6 @@
                                         <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->id }}</td>
                                         <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->name }} </td>
                                         <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->deadline }}</td>
-                                        {{-- <td class="px-4 text-xl py-2 border-r border-gray-300">{{ $category->category }}</td> --}}
                                         <td class="px-4 text-xl py-2 border-r border-gray-300">
                                             {{ $category->status === 0 ? 'Pending' : 'Done' }}
                                         </td>

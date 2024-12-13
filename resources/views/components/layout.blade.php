@@ -28,16 +28,16 @@
 
   <body class="bg-neutral-600">
     <!-- Header Section -->
-    <header class="bg-slate-700 text-white shadow-md py-4 fixed top-0 left-0 w-full">
+    <header class="bg-slate-700 text-white shadow-md py-2 fixed top-0 left-0 w-full">
       <nav class="container mx-auto flex justify-between items-center">
-        <h1 class="text-4xl font-semibold">{{ config('app.name', 'OrganizeMe') }}</h1>
+        <h1 class="text-3xl font-semibold">{{ config('app.name', 'OrganizeMe') }}</h1>
         
         @auth
           <form action="{{ route('logout') }}" method="post">
             @csrf
             <div class="flex items-center">
               <span class="text-white text-2xl mr-4">{{ Auth::user()->username }}  |</span>
-              <button class="hover:text-gray-300 text-2xl">Logout</button>
+              <button class="text-orange-300 hover:text-orange-500 text-2xl">Logout</button>
             </div>
           </form>
         @endauth
@@ -47,7 +47,7 @@
     {{-- Main content section --}}
     <main>
       <div class="container mx-auto mt-4 h-screen-80 overflow-y-auto">
-      {{ $slot }}
+        {{ $slot }}
       </div>
     </main>
     
