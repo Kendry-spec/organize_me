@@ -38,7 +38,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach (Auth::user()->categories as $category)
+                                        @foreach ($categories as $category)
                                             <tr class="border-b border-gray-300 {{ $category->status == 1 ? 'bg-sky-600 text-white' : '' }}">
                                                 <td class="px-4 py-2 border-r border-gray-300">{{ $category->id }}</td>
                                                 <td class="px-4 py-2 border-r border-gray-300">{{ $category->name }}</td>
@@ -83,7 +83,11 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <div class="mt-6">
+                                {{-- <div class="mt-6">
+                                    {{ $categories->links() }}
+                                </div> --}}
+                                {{-- Pagination Links --}}
+                                <div class="pagination mt-6">
                                     {{ $categories->links() }}
                                 </div>
                             </div>
