@@ -36,7 +36,7 @@
           <form action="{{ route('logout') }}" method="post">
             @csrf
             <div class="flex items-center">
-              <span class="text-white text-2xl mr-4">{{ Auth::user()->username }}  |</span>
+              <span class="text-white text-2xl mr-4">{{ Auth::user()->username }} |</span>
               <button class="text-orange-300 hover:text-orange-500 text-2xl">Logout</button>
             </div>
           </form>

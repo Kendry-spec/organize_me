@@ -1,7 +1,7 @@
 <x-layout>
 
     <!-- Container for Task Details -->
-    <div class="container max-w-5xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+    <div class="container max-w-5xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
         <div class="flex justify-center">
             <div class="w-full">
                 <div class="bg-gray-100 rounded-lg shadow-xl p-6 sm:p-8">
