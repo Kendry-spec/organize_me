@@ -1,30 +1,32 @@
 <x-layout>
-
-    <!-- Adding margin to separate form from header -->
-    <div class="container max-w-2xl mx-auto mt-12">
-        <div class="bg-gray-100 rounded-lg shadow-md p-2">
-            <div class="flex justify-between items-center">
-                <h3 class="text-3xl text-indigo-500 px-10">Add New Task</h3>
+    <!-- Responsive Form Container -->
+    <div class="container max-w-3xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-100 rounded-lg shadow-md p-6 sm:p-8">
+            <!-- Header Section -->
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+                <h3 class="text-2xl sm:text-3xl text-indigo-500 font-semibold mb-4 sm:mb-0">Add New Task</h3>
                 <a 
                     href="{{ route('category.index') }}" 
-                    class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 mr-10 rounded text-lg"
+                    class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded text-base sm:text-lg"
                 >
                     Back
                 </a>
             </div>
+            
+            <!-- Form Section -->
             <form 
                 id="categoryForm" 
                 action="{{ route('category.store') }}" 
                 method="POST" 
-                class="text-lg px-10"
-                >
+                class="space-y-3"
+            >
                 @csrf
 
                 <!-- Task Name -->
-                <div class="mb-2">
+                <div>
                     <label 
                         for="name" 
-                        class="block text-gray-700 text-lg font-semibold mb-2"
+                        class="block text-gray-700 text-base sm:text-lg font-semibold"
                     >
                         Task Name
                     </label>
@@ -33,18 +35,20 @@
                         name="name" 
                         id="name" 
                         placeholder="What task you want to tackle?" 
-                        class="block w-full p-2 pl-10 text-lg text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        class="block w-full p-2 text-sm sm:text-base text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        aria-label="Task Name"
+                        required
                     >
                     @error('name')
-                        <p class="text-red-600 text-lg">*{{ $message }}</p>
+                        <p class="text-red-600 text-sm mt-1">*{{ $message }}</p>
                     @enderror
                 </div>
 
                 <!-- Description -->
-                <div class="mb-2">
+                <div>
                     <label 
                         for="description" 
-                        class="block text-gray-700 text-lg font-semibold mb-2"
+                        class="block text-gray-700 text-base sm:text-lg font-semibold"
                     >
                         Description
                     </label>
@@ -53,18 +57,20 @@
                         id="description" 
                         placeholder="Task description" 
                         rows="3" 
-                        class="block w-full p-2 pl-10 text-lg text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        class="block w-full p-2 text-sm sm:text-base text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        aria-label="Task Description"
+                        required
                     ></textarea>
                     @error('description')
-                        <p class="text-red-600 text-lg">*{{ $message }}</p>
+                        <p class="text-red-600 text-sm mt-1">*{{ $message }}</p>
                     @enderror
                 </div>
 
                 <!-- Task Category -->
-                <div class="mb-2">
+                <div>
                     <label 
                         for="category" 
-                        class="block text-gray-700 text-lg font-semibold mb-2"
+                        class="block text-gray-700 text-base sm:text-lg font-semibold"
                     >
                         Task Category
                     </label>
@@ -73,18 +79,20 @@
                         name="category" 
                         id="category" 
                         placeholder="Label your task (e.g., work, school, personal)" 
-                        class="block w-full p-2 pl-10 text-lg text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        class="block w-full p-2 text-sm sm:text-base text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        aria-label="Task Category"
+                        required
                     >
                     @error('category')
-                        <p class="text-red-600 text-lg">*{{ $message }}</p>
+                        <p class="text-red-600 text-sm mt-1">*{{ $message }}</p>
                     @enderror
                 </div>
 
                 <!-- Deadline -->
-                <div class="mb-2">
+                <div>
                     <label 
                         for="deadline" 
-                        class="block text-gray-700 text-lg font-semibold mb-2"
+                        class="block text-gray-700 text-base sm:text-lg font-semibold"
                     >
                         Deadline
                     </label>
@@ -92,21 +100,24 @@
                         type="date" 
                         name="deadline" 
                         id="deadline" 
-                        placeholder="Select deadline" 
-                        class="block w-full p-2 pl-10 text-lg text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        class="block w-full p-2 text-sm sm:text-base text-gray-700 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500"
+                        aria-label="Deadline"
+                        required
                     >
                     @error('deadline')
-                        <p class="text-red-600 text-lg">*{{ $message }}</p>
+                        <p class="text-red-600 text-sm mt-1">*{{ $message }}</p>
                     @enderror
                 </div>
 
                 <!-- Save Button -->
-                <button 
-                    type="submit" 
-                    class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded text-lg"
-                >
-                    Save
-                </button>
+                <div class="text-center sm:text-right">
+                    <button 
+                        type="submit" 
+                        class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded text-sm sm:text-lg w-full sm:w-auto"
+                    >
+                        Save
+                    </button>
+                </div>
             </form>
         </div>
     </div>
@@ -114,8 +125,8 @@
     <!-- SweetAlert2 Script -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Form Validation Script -->
-    <script>
+      <!-- Form Validation Script -->
+      <script>
         const form = document.getElementById('categoryForm');
         const nameInput = document.getElementById('name');
         const descriptionInput = document.getElementById('description');
