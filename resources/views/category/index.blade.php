@@ -45,10 +45,12 @@
                                                 <td class="px-4 py-2 border-r border-gray-300">{{ $category->deadline }}</td>
                                                 <td class="px-4 py-2 border-r border-gray-300">{{ $category->status === 0 ? 'Pending' : 'Done' }}</td>
                                                 <td class="px-4 py-2 flex flex-wrap gap-2">
-                                                    <!-- Edit Button -->
-                                                    <a href="{{ route('category.edit', $category->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                                                @if ($category->status == 0)
+                                                     <!-- Edit Button -->
+                                                     <a href="{{ route('category.edit', $category->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
                                                         Edit
                                                     </a>
+                                                @endif
 
                                                     <!-- View Button -->
                                                     <a href="{{ route('category.show', $category->id) }}" class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded">
